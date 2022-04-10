@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            padding: 10px;
+            margin: 5px auto;
+            width: 500px;
+        }
+        label{
+            font-size: 20px;
+            color: #555;
+        } 
+
+        input[type="text"],
+        input[type="email"],
+        textarea{
+            padding: 8px;
+            width: 94%;
+            font-size: 10pt;
+            margin: 10px 0px;
+        }
+        .tombol{
+            background-color: rgb(62, 226, 232);
+            color: black;
+            margin: 20px 10px;
+            padding: 10px 40px;
+            width: 92%;
+            font-size: 15px;
+        }
+    </style>
+    <script language="javascript">
+
+        function validasi() {
+            var Nama = document.getElementById("nama").value;
+            var Email = document.getElementById("email").value;
+            var Alamat = document.getElementById("alamat").value;
+
+            if(Nama != "" && Email != "" && Alamat != ""){
+                alert("Berhasil Daftar");
+            } else {
+                alert("Data Harus Lengkap");
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form action="#" method="POST" onsubmit="validasi()" >
+            <fieldset>
+                <legend>Registrasi</legend>
+                <div>
+                    <label for="nama">nama</label>
+                    <input type="text" name="nama" id="nama" placeholder="Masukan Nama">
+                </div>
+                <div>
+                    <label for="email">Emai</label>
+                    <input type="email" name="email" id="email" placeholder="Masukan Email">
+                </div>
+                <div>
+                    <label for="alamar">Alamat</label>
+                    <textarea name="alamat" id="alamat" rows="4"></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="DAFTAR" class="tombol">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
